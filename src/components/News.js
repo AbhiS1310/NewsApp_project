@@ -11,7 +11,7 @@ const News = (props) => {
 
     const updateNews = async () => {
         props.setProgress(0);
-        var url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=886960eb2088499e81c01e2abc72e434&page=${page}&pagesize=${props.pagesize}`;
+        var url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${API_KEY}&page=${page}&pagesize=${props.pagesize}`;
         var data = await fetch(url);
         props.setProgress(50);
         var parsedData = await data.json();
